@@ -211,7 +211,7 @@
                         Ready to start your next project? Let's connect!
                     </p>
                 </div>
-                <form class="contact-form" action="https://formsubmit.co/uthmanolaniyi6@gmail.com" method="POST" data-aos="fade-up" data-aos-delay="200">
+<form class="contact-form" id="contact-form" data-aos="fade-up" data-aos-delay="200">
                     <div class="form-group">
                         <label for="name">Your Name</label>
                         <input type="text" id="name" name="name" required>
@@ -290,10 +290,34 @@
     <script src="aos.js" defer></script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js" defer></script>
     <script src="main.js" defer></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  emailjs.init("0ojmja-66_m5E5IUD"); // Replace with your public key
+</script>
+
+    <script>
+const form = document.getElementById('contact-form');
+
+form.addEventListener('submit', function(e) {
+  e.preventDefault(); // Prevent page reload
+
+  emailjs.sendForm('service_4stsv82', 'template_oggh72c', this)
+    .then(() => {
+      document.getElementById('success-message').style.display = 'block';
+      form.reset(); // Clear the form
+    })
+    .catch((err) => {
+      alert('Error sending message. Try again.');
+      console.error(err);
+    });
+});
+</script>
+
 </body>
 
 
 </html>
+
 
 
 
