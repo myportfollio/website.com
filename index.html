@@ -224,12 +224,14 @@
                         <label for="message">Message</label>
                         <textarea id="message" name="message" rows="5" required></textarea>
                     </div>
-                    <!-- Hidden inputs to prevent captcha & redirect after submit -->
-<input type="hidden" name="_captcha" value="false">
-<input type="hidden" name="_next" value="https://myportfollio.github.io/website-com/thank-you.html">
+                  
 
                     <button type="submit" class="btn btn-primary">Send Message</button>
                 </form>
+                <div id="success-message" style="display:none; color:green; margin-top:10px;">
+  Message sent! Thank you.
+</div>
+
             </div>
         </section>
     </main>
@@ -317,6 +319,7 @@ form.addEventListener('submit', function(e) {
 
 
 </html>
+
 
 
 
