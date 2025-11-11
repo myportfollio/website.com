@@ -619,31 +619,8 @@ h6 {
     color: var(--primary-color);
 }
 
-.footer-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 2rem;
-    max-width: 1100px;
-    margin: auto;
-    align-items: flex-start;
-}
 
-.footer-column {
-    flex: 1 1 250px;
-    min-width: 220px;
-}
-@media (max-width: 768px) {
-    .footer-container {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
 
-    .footer-column {
-        flex: 1 1 100%;
-        min-width: auto;
-    }
 
     .social-icons {
         display: flex;
@@ -673,6 +650,68 @@ h6 {
     border-top: 1px solid rgba(255,255,255,0.2);
     margin-top: 2rem;
     padding-top: 1rem;
+}
+
+/* Improve footer spacing and alignment */
+.main-footer {
+  background-color: var(--secondary-color);
+  color: var(--light-bg);
+  padding: 3rem 1.5rem;
+}
+
+/* Make footer titles stand out more */
+.footer-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+/* Adjust links and icons for mobile screens */
+@media (max-width: 768px) {
+  .main-footer {
+    text-align: center;
+  }
+
+  .footer-links a,
+  .footer-contact-info li {
+    display: inline-block;
+    margin: 0.3rem 0.5rem;
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+  .social-icons a {
+    margin-right: 1rem;
+  }
+}
+
+/* For extra-small screens */
+@media (max-width: 480px) {
+  .footer-title {
+    font-size: 1.1rem;
+  }
+
+  .footer-links a,
+  .footer-contact-info li {
+    font-size: 0.85rem;
+  }
+
+  .social-icons a {
+    font-size: 1rem;
+  }
+}
+
+/* Optional: add copyright divider */
+.copyright-text {
+  border-top: 1px solid rgba(255,255,255,0.2);
+  padding-top: 1rem;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: rgba(248, 244, 234, 0.7);
 }
 
 
@@ -1817,4 +1856,5 @@ body.dark-mode .contact-form textarea:focus {
     border-color: var(--primary-color);
 
 }
+
 
