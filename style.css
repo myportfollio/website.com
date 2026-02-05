@@ -149,21 +149,11 @@ h6 {
 
 .main-header {
     transition: background-color 0.3s ease;
-    background-color: rgba(248, 244, 234, 0.9);
+    background-color: #800000; /* ONE fixed color */
     backdrop-filter: blur(5px);
-   animation-name: colorChange;
-        animation-duration: 10s;
-        animation-iteration-count: infinite;
-    }
+}
 
-    @keyframes colorChange {
-        0%{background-color: red;}
-        20%{background-color: blue;}
-        40%{background-color: green;}
-        60%{background-color: yellow;}
-        80%{background-color: purple;}
-        100%{background-color: violet;}
-    }
+
 
 .navbar-brand {
     font-size: 1.5rem;
@@ -1869,6 +1859,7 @@ body.dark-mode .contact-form textarea:focus {
     border-color: var(--primary-color);
 
 }
+
 
 
 
