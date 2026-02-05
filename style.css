@@ -1870,6 +1870,18 @@ body.dark-mode .contact-form textarea:focus {
 
 
 
+/* FORCE header links to stay yellow in ALL modes */
+.main-header .nav-link,
+.main-header .navbar-brand,
+body.dark-mode .main-header .nav-link,
+body.dark-mode .main-header .navbar-brand {
+    color: var(--primary-color) !important;
+}
+.main-header .nav-link:hover,
+body.dark-mode .main-header .nav-link:hover {
+    color: #fff;
+}
+
 
 
 
